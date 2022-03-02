@@ -31,8 +31,8 @@ function mortgageCalc() {
     if( time>40 ) {
         time = 40;
         fillFieldValue('time',time);
-    } else if ( time<10 ) {
-        time = 10;
+    } else if ( time<5 || isNaN(time)) {
+        time = 5;
         fillFieldValue('time',time);
     }
 
