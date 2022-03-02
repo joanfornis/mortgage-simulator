@@ -66,9 +66,7 @@ function changeInput(type:string) {
 //events
 window.onload = function() {
     fillFieldValue('price',price)
-    fillFieldValue('savings',savings)
     fillFieldValue('time',time)
-    fillFieldValue('interest',interest)
     mortgageCalc()
 };
 

@@ -23,20 +23,23 @@
 
             <p>Precio del inmueble</p>
             <div class="input-wrapper">
-              <input type="number" id="price" placeholder="€">
+              <input type="number" id="price">
+              <span class="input-unit">€</span>
             </div>
             
             <p>Mis ahorros</p>
             <div class="input-wrapper disabled">
               <a class="input-dimm-add">+</a>
-              <input type="number" class="input-dimm" id="savings" placeholder="€" disabled>
+              <input type="number" class="input-dimm" id="savings" value="67800" disabled>
+              <span class="input-unit-dimm">%</span>
               <a class="input-dimm-sub">-</a>
             </div>
 
             <p>Plazo de la Hipoteca</p>
             <div class="input-wrapper">
               <a class="input-dimm-add" onclick="changeInput('add')">+</a>
-              <input type="number" class="input-dimm" id="time" placeholder="años" min="10" max="40">
+              <input type="number" class="input-dimm" id="time" min="10" max="40">
+              <span class="input-unit-dimm">años</span>
               <a class="input-dimm-sub" onclick="changeInput('sub')">-</a>
             </div>
 
@@ -49,7 +52,8 @@
             </div>
             <div class="input-wrapper disabled">
               <a class="input-dimm-add">+</a>
-              <input type="number" class="input-dimm" id="interest" placeholder="%" disabled>
+              <input type="number" class="input-dimm" id="interest" value="2.25" disabled>
+              <span class="input-unit-dimm">%</span>
               <a class="input-dimm-sub">-</a>
             </div>
 
