@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mortgage Calculator</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+  </head>
+
+  <body>
+
+    <section class="container">
+      <div class="row card">
+        <div class="col">
+
+          <h3>Calcula tu hipoteca</h3>
+
+          <form>
+
+            <p>Precio del inmueble</p>
+            <div class="input-wrapper">
+              <input type="number" id="price" placeholder="€">
+            </div>
+            
+            <p>Mis ahorros</p>
+            <div class="input-wrapper disabled">
+              <a class="input-dimm-add">+</a>
+              <input type="number" class="input-dimm" id="savings" placeholder="€" disabled>
+              <a class="input-dimm-sub">-</a>
+            </div>
+
+            <p>Plazo de la Hipoteca</p>
+            <div class="input-wrapper">
+              <a class="input-dimm-add" onclick="changeInput('add')">+</a>
+              <input type="number" class="input-dimm" id="time" placeholder="años" min="10" max="40">
+              <a class="input-dimm-sub" onclick="changeInput('sub')">-</a>
+            </div>
+
+            <div class="row">
+              <p>Interés</p>
+              <p>
+                <input type="radio" id="fijo" name="interes" value="fijo"> <label for="fijo">Fijo</label>
+                <input type="radio" id="variable" name="interes" value="variable" checked> <label for="variable">Variable</label>
+              </p>
+            </div>
+            <div class="input-wrapper disabled">
+              <a class="input-dimm-add">+</a>
+              <input type="number" class="input-dimm" id="interest" placeholder="%" disabled>
+              <a class="input-dimm-sub">-</a>
+            </div>
+
+          </form>
+          
+        </div>
+
+        <div class="col">
+
+          <div class="result-box">
+            <p>Cuota mensual
+              <span id="monthlyCost" class="highlight-text"></span>
+            </p>
+          </div>
+          <div class="result-box">
+            <p>Coste total <span id="totalCost"></span>
+              <span class="secondary-text">Préstamo + intereses + de 12% gastos</span>
+            </p>
+          </div>
+          <a class="btn" href="#?params">Solicita tu hipoteca</a>
+
+          <div class="copyright-wrapper">
+            <img class="copyright-logo" src="./assets/images/image.svg">
+            <span class="secondary-text">Copyright 1998-2021 Portal inmobiliario Pisos.com es un producto de HabitatSoft</span>
+            <a href="#" class="copyright-link">Aviso legal y política de privacidad</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <script src="./scripts/script.js"></script>
+
+  </body>
+</html>

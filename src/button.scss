@@ -1,0 +1,21 @@
+@mixin button () {
+    width: 100%;
+    margin: 1rem 0;
+    padding: $default-padding;
+    display: block;
+    text-align: center;
+    text-decoration:none;
+    font-weight: bold;
+    color: $color-primary;
+    background-color: lighten($color-primary, 40%);
+    &:hover {
+        background-color: lighten($color-primary, 45%);  
+    }
+    &:active {
+        background-color: lighten($color-primary, 35%);
+    }
+}   
+
+.btn {
+    @include button;
+}

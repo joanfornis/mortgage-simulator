@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "node-sass": "^7.0.1",
+    "http-server": "^14.1.0",
     "sass": "^1.49.8",
     "typescript": "^4.5.5"
   },
   "scripts": {
-    "compile-sass": "sass ./src/main.scss ./dist/css/main.css",
-    "compile-ts": "tsc --build"
+    "compile-sass": "sass ./src/main.scss ./css/main.css",
+    "compile-ts": "tsc --build",
+    "start": "http-server ./"
   }
 }

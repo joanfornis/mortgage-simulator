@@ -1,0 +1,63 @@
+@mixin input ($fontWeight: bold, $fontSize: 1.1rem) {
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+    color: $color-text;
+    border: $default-border;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+}   
+
+@mixin inputDimmButton() {
+    position:absolute;
+    z-index:1;
+    margin: 0.5rem 0.75rem;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 32px;
+    color: $color-primary;
+    background-color: lighten($color-primary, 40%);
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color-primary, 35%);
+    }
+}
+
+input[type=number], input[type=text] {
+    @include input;
+}
+
+input[type=number] { //deshabilitar spinner default
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* Firefox */
+    -moz-appearance: textfield;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+    input.input-dimm{
+        @include input($fontWeight: normal, $fontSize: 1rem);
+    }
+    .input-dimm-add, .input-dimm-sub{
+        @include inputDimmButton()
+    }
+    .input-dimm-add {right: 0}
+    .input-dimm-sub {left: 0}
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.8
+    }
+}
+
+input[type=radio] {
+    margin: 0 0.5rem;
+}

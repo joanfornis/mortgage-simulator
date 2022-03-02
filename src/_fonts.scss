@@ -1,0 +1,36 @@
+//Font Imports
+@font-face {
+    font-family: Montserrat;
+    src: url('./../assets/fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./../assets/fonts/Montserrat-SemiBold.ttf');
+    font-weight: bold;
+}
+
+//Font Variables
+$font-primary: 'Montserrat', Arial;
+
+//Text Format
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    padding-bottom: 0.75rem
+}
+p {
+    color: $color-text;
+    margin: 0.5rem 0
+}
+.highlight-text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold
+}
+.secondary-text {
+    display: block;
+    margin: 0.25rem 0;
+    color: lighten($color-text, 20%);
+    font-size: 0.8rem
+}

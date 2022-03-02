@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    padding: 1rem;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:768px) {
+        flex-direction:column
+    }
+}
+.col {
+    padding: 1.5rem;
+    @media (min-width:768px) {
+        flex: 1;
+    }
+    @media (max-width:768px) {
+        padding-bottom: 0;
+    }
+}

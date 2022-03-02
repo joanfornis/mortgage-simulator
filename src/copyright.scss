@@ -1,0 +1,20 @@
+.copyright-wrapper {
+    text-align: center;
+    padding: 1rem;
+}
+
+.copyright-logo {
+    width: 100%;
+    max-width: 100px;
+    margin: 0.5rem;
+}
+
+.copyright-link {
+    text-decoration: none;
+    color: lighten($color-text, 10%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    &:hover{
+        color: $color-primary
+    }
+}

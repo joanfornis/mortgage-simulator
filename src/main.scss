@@ -1,1 +1,19 @@
-h1 {color:red}
+//settings & common utils
+@import "variables";
+@import "fonts";
+@import "layout";
+
+//components
+@import "button";
+@import "card";
+@import "copyright";
+@import "input";
+@import "result";
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+
