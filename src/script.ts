@@ -73,3 +73,4 @@ window.onload = function() {
 window.addEventListener('click', function(event){
     mortgageCalc()
 })
+
